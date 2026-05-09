@@ -1,47 +1,55 @@
 import { motion } from "motion/react";
-import InteractiveButton from "./InteractiveButton";
+import { Zap } from "lucide-react";
+
+const StageHero = () => (
+  <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black text-white font-light">
+    <div className="relative z-10 flex flex-col items-center text-center">
+      <motion.span 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 0.3, y: 0 }}
+        className="text-[10px] md:text-[11px] font-y2k tracking-[1.5em] uppercase mb-8 border-b border-white/10 pb-4"
+      >
+        Entering The Void
+      </motion.span>
+      
+      <motion.h1 
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="text-6xl md:text-9xl tracking-[0.2em] uppercase mb-16 px-6 md:px-12 font-display leading-tight"
+      >
+        L D <br /> 
+        <span className="font-gothic normal-case italic text-white/40 block -mt-4 md:-mt-8">Claws</span>
+      </motion.h1>
+
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className="flex gap-8 md:gap-24 items-center"
+      >
+        <span className="font-y2k text-lg md:text-2xl italic tracking-tighter opacity-40">EST. 16</span>
+        <button className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all group">
+          <Zap size={20} className="group-hover:fill-current" />
+        </button>
+        <span className="font-y2k text-lg md:text-2xl italic tracking-tighter opacity-40">Elite</span>
+      </motion.div>
+    </div>
+
+    {/* Background elements */}
+    <div className="absolute inset-0 z-0 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-white opacity-[0.02] rounded-full blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vh] md:text-[60vh] font-black italic opacity-[0.01] select-none leading-none">
+        LC
+      </div>
+    </div>
+  </section>
+);
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 overflow-hidden">
-      <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-[1440px] mx-auto w-full"
-      >
-        <div className="font-childish text-2xl md:text-3xl mb-4 ml-8 md:ml-12 text-accent rotate-[-2deg]">
-          nail artist ⭒
-        </div>
-
-        <h1 className="text-[18vw] md:text-[14vw] leading-[0.75] mb-8 font-display">
-          Mya<br />
-          <motion.span 
-            initial={{ x: 0 }}
-            animate={{ x: "15vw" }}
-            transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="block text-accent font-childish normal-case italic"
-          >
-            Nicole
-          </motion.span>
-        </h1>
-        
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-12 mt-12">
-          <p className="max-w-[320px] text-lg font-body font-medium leading-relaxed text-primary/80">
-            Specializing in artistic aesthetics and premium nail care. Book your seasonal slot now.
-          </p>
-          
-          <div className="flex flex-col gap-6">
-            <InteractiveButton>
-              Secure Your Set
-            </InteractiveButton>
-            <a href="#portfolio" className="group flex items-center gap-2 text-accent font-semibold uppercase tracking-widest text-sm transition-all hover:gap-4">
-              View Collection
-              <span className="text-xl">→</span>
-            </a>
-          </div>
-        </div>
-      </motion.div>
-    </section>
+    <div className="bg-[#050505] text-white w-full h-screen overflow-hidden">
+      <StageHero />
+    </div>
   );
 }

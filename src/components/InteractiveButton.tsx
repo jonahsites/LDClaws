@@ -1,8 +1,9 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import type { ReactNode } from "react";
 
 interface InteractiveButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 

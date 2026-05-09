@@ -2,58 +2,58 @@ import { motion } from "motion/react";
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-accent-soft/10 blur-[100px] pointer-events-none" />
+    <section id="inquiry" className="relative py-48 overflow-hidden bg-base">
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent-silver/5 blur-[120px] pointer-events-none" />
       
-      <div className="relative border-y border-primary/10 py-32">
-        <div className="flex flex-col gap-0">
+      <div className="relative border-y border-white/5 py-32 bg-accent-warm/30">
+        <div className="flex flex-col gap-0 items-center overflow-hidden">
           <motion.h2 
             initial={{ x: "-100%" }}
             whileInView={{ x: "0%" }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[12vw] font-display whitespace-nowrap"
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            className="text-[14vw] md:text-[10vw] font-display whitespace-nowrap chrome-text scale-y-125"
           >
-            Architectural <span className="text-outline font-brutalist">Builder</span>
+            HANDMADE <span className="text-outline text-white/20">PRESS-ONS</span>
           </motion.h2>
           
           <motion.div 
             initial={{ x: "100%" }}
             whileInView={{ x: "0%" }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-end mt-[-2vw]"
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            className="flex justify-center -mt-4"
           >
-            <h2 className="text-[12vw] tracking-tighter leading-[0.75] text-accent font-childish normal-case">
-              Bespoke Design
+            <h2 className="text-[12vw] md:text-[8vw] tracking-tighter leading-[0.75] text-white/90 font-gothic normal-case">
+              Commissions Open
             </h2>
           </motion.div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-12 mt-32">
-        <div className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-x border-white/5 max-w-[1440px] mx-auto mt-32">
+        <div className="divide-y divide-white/5 border-y border-white/5">
           <ServiceItem 
             number="01" 
-            title="The Structure Set" 
-            description="Our signature builder gel application focusing on apex placement and structural integrity for long-wear performance."
+            title="THE CUSTOM SET" 
+            description="Fully bespoke handmade press-on nails tailored to your specific size and aesthetic vision. Reusable and premium quality."
           />
           <ServiceItem 
             number="02" 
-            title="Custom Handpaint" 
-            description="From minimalist lines to complex abstract masterpieces. Every set is a unique canvas of expression."
+            title="Y2K CYBER TECH" 
+            description="Influenced by early 2000s tech aesthetics. Chrome gradients, 3D metallic textures, and cyber-circuitry patterns."
           />
         </div>
-        <div className="space-y-12 md:mt-24">
+        <div className="divide-y divide-white/5 border-y border-white/5 border-l border-white/5">
           <ServiceItem 
             number="03" 
-            title="Sculpted Extensions" 
-            description="Achieving perfect shapes through paper forms. No tips, just pure sculpted architecture tailored to your beds."
+            title="GOTHIC NIGHTS" 
+            description="Dark atmospheric designs featuring blackletter calligraphy, matte textures, and piercing hardware accents."
           />
           <ServiceItem 
             number="04" 
-            title="Maintenance & Care" 
-            description="Dedicated removal and health sessions to ensure your natural nails remain pristine between artistic cycles."
+            title="SIZING KITS" 
+            description="Essential for the perfect fit. We send a kit to ensure your handmade commissions fit flawlessly before production."
           />
         </div>
       </div>
@@ -64,14 +64,21 @@ export default function Services() {
 function ServiceItem({ number, title, description }: { number: string, title: string, description: string }) {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="group border-l border-primary/20 pl-8 pt-4 pb-8 hover:border-accent transition-colors duration-500"
+      className="group p-12 hover:bg-white transition-all duration-500 relative"
     >
-      <span className="font-display text-4xl leading-none opacity-20 group-hover:opacity-100 group-hover:text-accent transition-all duration-500">{number}</span>
-      <h3 className="text-2xl mt-4 mb-4">{title}</h3>
-      <p className="text-primary/70 leading-relaxed font-body max-w-md">{description}</p>
+      <div className="flex justify-between items-start mb-12">
+        <span className="font-y2k text-xs opacity-40 group-hover:text-black group-hover:opacity-100 transition-all">{number}</span>
+        <div className="w-10 h-[1px] bg-white/20 group-hover:bg-black transition-all" />
+      </div>
+      <h3 className="text-4xl font-display group-hover:text-black transition-all mb-6">{title}</h3>
+      <p className="text-white/40 group-hover:text-black/60 leading-relaxed font-body max-w-sm transition-all">{description}</p>
+      
+      <div className="absolute bottom-8 right-8 text-black opacity-0 group-hover:opacity-100 transition-all font-gothic text-2xl">
+        LD
+      </div>
     </motion.div>
   );
 }

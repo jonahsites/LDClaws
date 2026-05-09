@@ -1,59 +1,62 @@
-import { Instagram, Smartphone, MapPin } from "lucide-react";
+import { Instagram, Mail, Globe } from "lucide-react";
+import type { ReactNode } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-primary text-base py-24 px-6 md:px-12 overflow-hidden relative">
+    <footer className="bg-base text-primary py-32 px-6 md:px-12 overflow-hidden relative border-t border-white/5">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 relative z-10">
         <div className="col-span-1 md:col-span-1 flex flex-col justify-between">
           <div>
-            <h2 className="text-4xl font-display mb-8">MyaNicole<br /><span className="text-accent font-childish normal-case">Nails</span></h2>
+            <h2 className="text-4xl font-display mb-8 tracking-tighter">LD Claws<br /><span className="text-white/30 font-gothic normal-case text-2xl">Aesthetic Laboratory</span></h2>
             <div className="flex gap-4">
-              <SocialIcon icon={<Instagram size={20} />} href="https://instagram.com" />
-              <SocialIcon icon={<Smartphone size={20} />} href="tel:2158695717" />
-              <SocialIcon icon={<MapPin size={20} />} href="#" />
+              <SocialIcon icon={<Instagram size={18} />} href="https://instagram.com" />
+              <SocialIcon icon={<Mail size={18} />} href="mailto:Ldclaws16@gmail.com" />
+              <SocialIcon icon={<Globe size={18} />} href="#" />
             </div>
           </div>
         </div>
 
         <div className="md:col-span-1">
-          <h5 className="text-accent uppercase text-[10px] tracking-[0.2em] font-bold mb-6">Explore</h5>
-          <ul className="space-y-4 text-sm font-medium">
-            <li><a href="#" className="hover:text-accent-soft transition-colors">Home</a></li>
-            <li><a href="#services" className="hover:text-accent-soft transition-colors">Services</a></li>
-            <li><a href="#portfolio" className="hover:text-accent-soft transition-colors">Gallery</a></li>
-            <li><a href="#book" className="hover:text-accent-soft transition-colors">Booking</a></li>
+          <h5 className="text-white font-y2k uppercase text-[10px] tracking-[0.4em] mb-8 opacity-40">Navigation</h5>
+          <ul className="space-y-4 text-xs font-y2k tracking-widest uppercase">
+            <li><a href="#" className="hover:text-white transition-colors">Front</a></li>
+            <li><a href="#inquiry" className="hover:text-white transition-colors">Inquiry</a></li>
+            <li><a href="#archive" className="hover:text-white transition-colors">Archive</a></li>
+            <li><a href="#info" className="hover:text-white transition-colors">Information</a></li>
           </ul>
         </div>
 
         <div className="md:col-span-1">
-          <h5 className="text-accent uppercase text-[10px] tracking-[0.2em] font-bold mb-6">Contact</h5>
-          <ul className="space-y-4 text-sm font-medium">
-            <li>215-869-5717</li>
-            <li>Levittown, PA 19054</li>
-            <li>mya@nicole.nails</li>
+          <h5 className="text-white font-y2k uppercase text-[10px] tracking-[0.4em] mb-8 opacity-40">Contact</h5>
+          <ul className="space-y-4 text-sm font-light text-white/60">
+            <li className="font-y2k text-[10px] uppercase">Based in US</li>
+            <li>Ldclaws16@gmail.com</li>
+            <li className="italic font-gothic text-xl"> Commissions Open</li>
           </ul>
         </div>
 
         <div className="md:col-span-1 flex flex-col justify-end items-start md:items-end">
-          <p className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40 mb-2">© {currentYear} MN Nials</p>
-          <p className="text-xs opacity-60">Handcrafted in Pennsylvania</p>
+          <div className="text-right">
+            <p className="text-[10px] font-y2k tracking-[0.2em] font-medium opacity-20 mb-2 uppercase">© {currentYear} LD Claws Archive</p>
+            <p className="text-xs font-light opacity-50">Handcrafted in the US. No PR.</p>
+          </div>
         </div>
       </div>
 
-      <div className="absolute -bottom-12 right-0 opacity-[0.03] select-none pointer-events-none">
-        <h1 className="text-[30vw] leading-none mb-0 font-display italic">2026</h1>
+      <div className="absolute -bottom-12 right-0 opacity-[0.02] select-none pointer-events-none">
+        <h1 className="text-[35vw] leading-none mb-0 font-display font-black tracking-tighter">LDC</h1>
       </div>
     </footer>
   );
 }
 
-function SocialIcon({ icon, href }: { icon: React.ReactNode, href: string }) {
+function SocialIcon({ icon, href }: { icon: ReactNode, href: string }) {
   return (
     <a 
       href={href} 
-      className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300"
+      className="w-12 h-12 flex items-center justify-center glass rounded-full hover:bg-white hover:text-black transition-all duration-500"
     >
       {icon}
     </a>
