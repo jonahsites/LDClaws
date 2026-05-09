@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&family=DynaPuff:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-base: #E4E2DD;
+  --color-primary: #1E1E1E;
+  --color-accent: #DB4A2B;
+  --color-accent-soft: #FF89A9;
+  --color-accent-warm: #F8A348;
+  --color-accent-pink: #FFD1DC;
+  
+  --font-display: "Shrikhand", cursive;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-childish: "DynaPuff", cursive;
+  --font-brutalist: "Syne", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-base text-primary font-body antialiased selection:bg-accent selection:text-white;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    @apply font-display tracking-tighter leading-[0.75] uppercase;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-base;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+}
