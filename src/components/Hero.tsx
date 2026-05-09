@@ -19,7 +19,7 @@ const StageHero = () => (
         className="text-6xl md:text-9xl tracking-[0.2em] uppercase mb-16 px-6 md:px-12 font-display leading-tight"
       >
         L D <br /> 
-        <span className="font-gothic normal-case italic text-white/40 block -mt-4 md:-mt-8">Nails</span>
+        <span className="font-gothic normal-case italic text-white/40 block -mt-4 md:-mt-8">Claws</span>
       </motion.h1>
 
       <motion.div 
