@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function Services() {
   return (
-    <section id="inquiry" className="relative py-48 overflow-hidden bg-base">
+    <section id="services" className="relative py-48 overflow-hidden bg-base">
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent-silver/5 blur-[120px] pointer-events-none" />
       
       <div className="relative border-y border-white/5 py-32 bg-accent-warm/30">
@@ -14,7 +14,7 @@ export default function Services() {
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="text-[14vw] md:text-[10vw] font-display whitespace-nowrap chrome-text scale-y-125"
           >
-            HANDMADE <span className="text-outline text-white/20">PRESS-ONS</span>
+            CUSTOM <span className="text-outline text-white/20">PRESS-ONS</span>
           </motion.h2>
           
           <motion.div 
@@ -25,7 +25,7 @@ export default function Services() {
             className="flex justify-center -mt-4"
           >
             <h2 className="text-[12vw] md:text-[8vw] tracking-tighter leading-[0.75] text-white/90 font-gothic normal-case">
-              Commissions Open
+              Booking Now
             </h2>
           </motion.div>
         </div>
@@ -35,25 +35,25 @@ export default function Services() {
         <div className="divide-y divide-white/5 border-y border-white/5">
           <ServiceItem 
             number="01" 
-            title="THE CUSTOM SET" 
-            description="Fully bespoke handmade press-on nails tailored to your specific size and aesthetic vision. Reusable and premium quality."
+            title="FULL CUSTOM SET" 
+            description="Handmade press-on nails created to your exact measurements and design preferences."
           />
           <ServiceItem 
             number="02" 
-            title="Y2K CYBER TECH" 
-            description="Influenced by early 2000s tech aesthetics. Chrome gradients, 3D metallic textures, and cyber-circuitry patterns."
+            title="NAIL ARTISTRY" 
+            description="Specialized hand-painted designs ranging from minimalist to complex creative patterns."
           />
         </div>
         <div className="divide-y divide-white/5 border-y border-white/5 border-l border-white/5">
           <ServiceItem 
             number="03" 
-            title="GOTHIC NIGHTS" 
-            description="Dark atmospheric designs featuring blackletter calligraphy, matte textures, and piercing hardware accents."
+            title="CHROME & 3D" 
+            description="Premium finishes including metallic chrome gradients and custom 3D sculpted textures."
           />
           <ServiceItem 
             number="04" 
             title="SIZING KITS" 
-            description="Essential for the perfect fit. We send a kit to ensure your handmade commissions fit flawlessly before production."
+            description="Required for first-time orders to ensure a perfect fit for your custom handmade sets."
           />
         </div>
       </div>

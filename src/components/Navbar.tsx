@@ -18,7 +18,7 @@ export default function Navbar() {
       </div>
       
       <div className="hidden md:flex items-center gap-10 pointer-events-auto glass px-8 py-3 rounded-full border-white/5">
-        {["Inquiry", "Sets", "Archive", "Info"].map((link) => (
+        {["Services", "Portfolio", "Booking", "Contact"].map((link) => (
           <a
             key={link}
             href={`#${link.toLowerCase()}`}

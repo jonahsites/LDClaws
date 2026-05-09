@@ -4,9 +4,9 @@ import type { ReactNode } from "react";
 
 export default function Booking() {
   return (
-    <section id="info" className="bg-accent-warm py-48 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
+    <section id="booking" className="bg-accent-warm py-48 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white opacity-[0.01] font-display text-[20vw] flex items-center justify-center -z-10 select-none">
-        COMMISSION
+        BOOKING
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 relative z-10">
@@ -18,17 +18,17 @@ export default function Booking() {
             transition={{ duration: 1 }}
             className="text-[10vw] md:text-[6vw] leading-[0.85] tracking-tighter uppercase font-display"
           >
-            Start your <br /> 
-            <span className="font-gothic normal-case italic text-white/50">Custom Inquiry</span>
+            Ready for a <br /> 
+            <span className="font-gothic normal-case italic text-white/50">Custom Set?</span>
           </motion.h2>
           
           <div className="mt-16 space-y-8 max-w-xl">
             <p className="text-xl font-body text-white/60 leading-relaxed">
-              Accepting bespoke commissions for handmade press-on sets. Each set is unique and crafted with professional-grade materials for longevity and aesthetic impact.
+              Accepting orders for custom handmade press-on sets. Professional grade materials for a salon-quality finish that lasts.
             </p>
             <div className="flex items-center gap-8 py-8 border-y border-white/10">
               <div>
-                <span className="block font-y2k text-[10px] opacity-30 mb-2 uppercase tracking-widest">Commission Status</span>
+                <span className="block font-y2k text-[10px] opacity-30 mb-2 uppercase tracking-widest">Booking Status</span>
                 <span className="inline-flex items-center gap-2 text-white font-bold uppercase tracking-widest">
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                   OPEN
@@ -36,7 +36,7 @@ export default function Booking() {
               </div>
               <div className="w-[1px] h-12 bg-white/10" />
               <div>
-                <span className="block font-y2k text-[10px] opacity-30 mb-2 uppercase tracking-widest">Base of Operations</span>
+                <span className="block font-y2k text-[10px] opacity-30 mb-2 uppercase tracking-widest">Ships From</span>
                 <span className="text-white font-bold uppercase tracking-widest">UNITED STATES</span>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function Booking() {
           <div className="space-y-4">
             <InquiryLink 
               title="DM to Order" 
-              subtitle="Direct messaging is the fastest way to book."
+              subtitle="Direct message for the fastest response."
               href="https://instagram.com" 
               icon={<Instagram className="w-5 h-5" />}
             />
@@ -59,7 +59,7 @@ export default function Booking() {
             />
             <InquiryLink 
               title="Sizing Guide" 
-              subtitle="Ensuring your custom set fits perfectly."
+              subtitle="Get the perfect fit for your set."
               href="#" 
               icon={<ArrowUpRight className="w-5 h-5" />}
             />

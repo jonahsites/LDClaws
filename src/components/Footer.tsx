@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 relative z-10">
         <div className="col-span-1 md:col-span-1 flex flex-col justify-between">
           <div>
-            <h2 className="text-4xl font-display mb-8 tracking-tighter">LD Claws<br /><span className="text-white/30 font-gothic normal-case text-2xl">Aesthetic Laboratory</span></h2>
+            <h2 className="text-4xl font-display mb-8 tracking-tighter">LD Nails<br /><span className="text-white/30 font-gothic normal-case text-2xl">Professional Nail Artistry</span></h2>
             <div className="flex gap-4">
               <SocialIcon icon={<Instagram size={18} />} href="https://instagram.com" />
               <SocialIcon icon={<Mail size={18} />} href="mailto:Ldclaws16@gmail.com" />
@@ -21,10 +21,10 @@ export default function Footer() {
         <div className="md:col-span-1">
           <h5 className="text-white font-y2k uppercase text-[10px] tracking-[0.4em] mb-8 opacity-40">Navigation</h5>
           <ul className="space-y-4 text-xs font-y2k tracking-widest uppercase">
-            <li><a href="#" className="hover:text-white transition-colors">Front</a></li>
-            <li><a href="#inquiry" className="hover:text-white transition-colors">Inquiry</a></li>
-            <li><a href="#archive" className="hover:text-white transition-colors">Archive</a></li>
-            <li><a href="#info" className="hover:text-white transition-colors">Information</a></li>
+            <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
+            <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a></li>
+            <li><a href="#booking" className="hover:text-white transition-colors">Booking</a></li>
           </ul>
         </div>
 
@@ -33,7 +33,7 @@ export default function Footer() {
           <ul className="space-y-4 text-sm font-light text-white/60">
             <li className="font-y2k text-[10px] uppercase">Based in US</li>
             <li>Ldclaws16@gmail.com</li>
-            <li className="italic font-gothic text-xl"> Commissions Open</li>
+            <li className="italic font-gothic text-xl"> Booking Open</li>
           </ul>
         </div>
 

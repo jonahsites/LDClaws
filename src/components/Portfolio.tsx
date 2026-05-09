@@ -3,50 +3,50 @@ import { motion } from "motion/react";
 const ARCHIVE = [
   {
     id: 1,
-    name: "CYBER SIGILISM",
-    price: "SET 001",
+    name: "MATTE BLACK ART",
+    price: "STYLE 01",
     image: "https://images.unsplash.com/photo-1632345034870-179a5957018c?q=80&w=600&auto=format&fit=crop",
   },
   {
     id: 2,
-    name: "CHROME CROSS",
-    price: "SET 002",
+    name: "CHROME DETAILS",
+    price: "STYLE 02",
     image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600&auto=format&fit=crop",
   },
   {
     id: 3,
-    name: "MATRIX WEB",
-    price: "SET 003",
+    name: "METALLIC ACCENTS",
+    price: "STYLE 03",
     image: "https://images.unsplash.com/photo-1629190875141-944208d13264?q=80&w=600&auto=format&fit=crop",
   },
   {
     id: 4,
-    name: "GOTHIC ARCH",
-    price: "SET 004",
+    name: "GEOMETRIC LINER",
+    price: "STYLE 04",
     image: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=600&auto=format&fit=crop",
   },
   {
     id: 5,
-    name: "LIQUID MERCURY",
-    price: "SET 005",
+    name: "LIQUID SILVER",
+    price: "STYLE 05",
     image: "https://images.unsplash.com/photo-1610992015732-2449b0deec5e?q=80&w=600&auto=format&fit=crop",
   },
   {
     id: 6,
-    name: "STARDUST VOID",
-    price: "SET 006",
+    name: "MINIMALIST NOIR",
+    price: "STYLE 06",
     image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=600&auto=format&fit=crop"
   }
 ];
 
 export default function Portfolio() {
   return (
-    <section id="archive" className="bg-black px-6 md:px-12 py-48 border-t border-white/5">
+    <section id="portfolio" className="bg-black px-6 md:px-12 py-48 border-t border-white/5">
       <div className="flex justify-between items-end mb-24">
-        <h2 className="font-display text-6xl md:text-8xl">Archive <span className="text-white/20">Catalog</span></h2>
+        <h2 className="font-display text-6xl md:text-8xl">Work <span className="text-white/20">Portfolio</span></h2>
         <div className="font-y2k text-[10px] opacity-40 text-right hidden md:block tracking-[0.4em]">
-          SELECT WORKS BY LD CLAWS<br />
-          AUTUMN / WINTER 2024
+          SELECTED SETS BY LD NAILS<br />
+          RECENT WORK 2024
         </div>
       </div>
       

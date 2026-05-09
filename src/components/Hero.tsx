@@ -9,7 +9,7 @@ const StageHero = () => (
         animate={{ opacity: 0.3, y: 0 }}
         className="text-[10px] md:text-[11px] font-y2k tracking-[1.5em] uppercase mb-8 border-b border-white/10 pb-4"
       >
-        Entering The Void
+        Handmade Press-Ons
       </motion.span>
       
       <motion.h1 
@@ -19,7 +19,7 @@ const StageHero = () => (
         className="text-6xl md:text-9xl tracking-[0.2em] uppercase mb-16 px-6 md:px-12 font-display leading-tight"
       >
         L D <br /> 
-        <span className="font-gothic normal-case italic text-white/40 block -mt-4 md:-mt-8">Claws</span>
+        <span className="font-gothic normal-case italic text-white/40 block -mt-4 md:-mt-8">Nails</span>
       </motion.h1>
 
       <motion.div 
@@ -28,11 +28,11 @@ const StageHero = () => (
         transition={{ delay: 0.5 }}
         className="flex gap-8 md:gap-24 items-center"
       >
-        <span className="font-y2k text-lg md:text-2xl italic tracking-tighter opacity-40">EST. 16</span>
+        <span className="font-y2k text-lg md:text-2xl italic tracking-tighter opacity-40">US BASED</span>
         <button className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all group">
           <Zap size={20} className="group-hover:fill-current" />
         </button>
-        <span className="font-y2k text-lg md:text-2xl italic tracking-tighter opacity-40">Elite</span>
+        <span className="font-y2k text-lg md:text-2xl italic tracking-tighter opacity-40">Professional</span>
       </motion.div>
     </div>
 
